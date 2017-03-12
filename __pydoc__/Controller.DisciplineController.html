@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module Controller.DisciplineController</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="Controller.html"><font color="#ffffff">Controller</font></a>.DisciplineController</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:d%3A%5Cfaculty%5Cpython%5Cstudentsregister%5Ccontroller%5Cdisciplinecontroller.py">d:\faculty\python\studentsregister\controller\disciplinecontroller.py</a></font></td></tr></table>
+    <p></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ee77aa">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Classes</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl>
+<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+</font></dt><dd>
+<dl>
+<dt><font face="helvetica, arial"><a href="Controller.DisciplineController.html#DisciplineController">DisciplineController</a>
+</font></dt></dl>
+</dd>
+</dl>
+ <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="DisciplineController">class <strong>DisciplineController</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt>creates&nbsp;a&nbsp;new&nbsp;instance&nbsp;of&nbsp;Discipline&nbsp;Controller<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="DisciplineController-__init__"><strong>__init__</strong></a>(self, disRepo, graRepo, undoCtrl)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<dl><dt><a name="DisciplineController-__len__"><strong>__len__</strong></a>(self)</dt><dd><tt>returns&nbsp;the&nbsp;size&nbsp;of&nbsp;the&nbsp;list&nbsp;of&nbsp;disciplines</tt></dd></dl>
+
+<dl><dt><a name="DisciplineController-addDiscipline"><strong>addDiscipline</strong></a>(self, dis)</dt><dd><tt>adds&nbsp;a&nbsp;Discipline&nbsp;to&nbsp;the&nbsp;register<br>
+Input:&nbsp;dis&nbsp;-&nbsp;of&nbsp;type&nbsp;Discipline<br>
+Output:&nbsp;the&nbsp;Discipline&nbsp;is&nbsp;added,&nbsp;if&nbsp;there&nbsp;in&nbsp;no&nbsp;other&nbsp;Discipline&nbsp;with&nbsp;the&nbsp;given&nbsp;name<br>
+Exceptions:&nbsp;raises&nbsp;DisciplineException&nbsp;if&nbsp;another&nbsp;Discipline&nbsp;with&nbsp;the&nbsp;same&nbsp;name&nbsp;already&nbsp;exists</tt></dd></dl>
+
+<dl><dt><a name="DisciplineController-findDisciplineByTeacher"><strong>findDisciplineByTeacher</strong></a>(self, teacher)</dt><dd><tt>finds&nbsp;all&nbsp;disciplines&nbsp;having&nbsp;the&nbsp;given&nbsp;teacher<br>
+Input:&nbsp;teacher&nbsp;-&nbsp;the&nbsp;teacher&nbsp;of&nbsp;the&nbsp;Discipline&nbsp;being&nbsp;searched&nbsp;for<br>
+Output:&nbsp;list&nbsp;of&nbsp;disciplines&nbsp;having&nbsp;the&nbsp;given&nbsp;teacher</tt></dd></dl>
+
+<dl><dt><a name="DisciplineController-getAll"><strong>getAll</strong></a>(self)</dt><dd><tt>returns&nbsp;the&nbsp;list&nbsp;of&nbsp;disciplines</tt></dd></dl>
+
+<dl><dt><a name="DisciplineController-redo"><strong>redo</strong></a>(self)</dt><dd><tt>redoes&nbsp;the&nbsp;last&nbsp;discipline&nbsp;operation&nbsp;that&nbsp;changed&nbsp;the&nbsp;set&nbsp;of&nbsp;disciplines<br>
+Returns&nbsp;True&nbsp;if&nbsp;operation&nbsp;was&nbsp;redone,&nbsp;False&nbsp;otherwise.</tt></dd></dl>
+
+<dl><dt><a name="DisciplineController-removeDiscipline"><strong>removeDiscipline</strong></a>(self, name)</dt><dd><tt>removes&nbsp;a&nbsp;Discipline&nbsp;from&nbsp;the&nbsp;register,&nbsp;using&nbsp;its&nbsp;name&nbsp;//&nbsp;removes&nbsp;grades&nbsp;with&nbsp;inputed&nbsp;discipline<br>
+Input:&nbsp;name&nbsp;-&nbsp;positive&nbsp;integer,&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;Discipline&nbsp;that&nbsp;must&nbsp;be&nbsp;removed<br>
+Output:&nbsp;if&nbsp;such&nbsp;a&nbsp;Discipline&nbsp;exists,&nbsp;it&nbsp;is&nbsp;removed&nbsp;and&nbsp;returned<br>
+Exceptions:&nbsp;raises&nbsp;DisciplineException&nbsp;if&nbsp;a&nbsp;Discipline&nbsp;with&nbsp;the&nbsp;given&nbsp;name&nbsp;does&nbsp;not&nbsp;exist</tt></dd></dl>
+
+<dl><dt><a name="DisciplineController-undo"><strong>undo</strong></a>(self)</dt><dd><tt>undoes&nbsp;the&nbsp;last&nbsp;discipline&nbsp;operation&nbsp;that&nbsp;changed&nbsp;the&nbsp;set&nbsp;of&nbsp;disciplines<br>
+Returns&nbsp;True&nbsp;if&nbsp;operation&nbsp;was&nbsp;undone,&nbsp;False&nbsp;otherwise.</tt></dd></dl>
+
+<dl><dt><a name="DisciplineController-updateDiscipline"><strong>updateDiscipline</strong></a>(self, name, newTeacherName)</dt><dd><tt>updates&nbsp;a&nbsp;Discipline&nbsp;from&nbsp;the&nbsp;register,&nbsp;using&nbsp;its&nbsp;name<br>
+Input:&nbsp;name&nbsp;-&nbsp;positive&nbsp;integer,&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;Discipline&nbsp;that&nbsp;must&nbsp;be&nbsp;updated<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;newTeacherName&nbsp;-&nbsp;the&nbsp;name&nbsp;of&nbsp;the&nbsp;new&nbsp;teacher<br>
+Output:&nbsp;if&nbsp;such&nbsp;a&nbsp;Discipline&nbsp;exists,&nbsp;it&nbsp;is&nbsp;updated<br>
+Exceptions:&nbsp;raises&nbsp;DisciplineException&nbsp;if&nbsp;a&nbsp;Discipline&nbsp;with&nbsp;the&nbsp;given&nbsp;name&nbsp;does&nbsp;not&nbsp;exist</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-testDisciplineController"><strong>testDisciplineController</strong></a>()</dt></dl>
+</td></tr></table>
+</body></html>

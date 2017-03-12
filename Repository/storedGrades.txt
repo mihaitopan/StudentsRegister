@@ -1,0 +1,6 @@
+Literature;11;9.6
+Literature;12;7.6
+Literature;13;9.2
+Physics;11;6.6
+Physics;12;4.6
+Physics;13;10.0
